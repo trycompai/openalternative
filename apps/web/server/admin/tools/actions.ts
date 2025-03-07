@@ -140,6 +140,8 @@ export const analyzeToolStack = adminProcedure
 
     // Get analysis and cache it
     const repo = await githubClient.queryRepository(tool.repositoryUrl)
+    const screenshotUrl = await uploadScreenshot(tool.websiteUrl, `tools/${tool.slug}/screenshot`)
+    const faviconUrl = await uploadFavicon(tool.websiteUrl, `tools/${tool.slug}/favicon`)
 
     if (!repo) {
       throw new Error("Repository not found")
@@ -148,6 +150,8 @@ export const analyzeToolStack = adminProcedure
     await db.tool.update({
       where: { id: tool.id },
       data: {
+        screenshotUrl,
+        faviconUrl,
         stars: repo.stars,
         forks: repo.forks,
         score: repo.score,

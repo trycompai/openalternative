@@ -41,8 +41,8 @@ export const ToolActions = ({ className, tool, setRowAction, ...props }: ToolAct
     },
     {
       action: analyzeToolStack,
-      label: "Analyze Stack",
-      successMessage: "Tool stack analyzed",
+      label: "Get all data",
+      successMessage: "All data fetched",
     },
   ] as const
 
