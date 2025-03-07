@@ -48,16 +48,6 @@ export const toolScheduled = inngest.createFunction(
         })
       }),
 
-      step.run("analyze-repository-stack", async () => {
-        const { id, repositoryUrl } = tool
-        const { stack } = await analyzeRepositoryStack(repositoryUrl)
-
-        return await db.tool.update({
-          where: { id },
-          data: { stacks: { set: stack.map(slug => ({ slug })) } },
-        })
-      }),
-
       step.run("upload-favicon", async () => {
         const { id, slug, websiteUrl } = tool
         const faviconUrl = await uploadFavicon(websiteUrl, `tools/${slug}/favicon`)
