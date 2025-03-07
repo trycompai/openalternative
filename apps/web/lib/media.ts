@@ -148,7 +148,6 @@ export const uploadScreenshot = async (url: string, s3Key: string): Promise<stri
     storage_bucket: env.S3_BUCKET,
     storage_access_key_id: env.S3_ACCESS_KEY,
     storage_secret_access_key: env.S3_SECRET_ACCESS_KEY,
-    storage_region: env.S3_REGION,
     storage_return_location: "true",
   }
 
