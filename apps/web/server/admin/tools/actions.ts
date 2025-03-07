@@ -10,6 +10,7 @@ import { uploadFavicon, uploadScreenshot } from "~/lib/media"
 import { adminProcedure } from "~/lib/safe-actions"
 import { analyzeRepositoryStack } from "~/lib/stack-analysis"
 import { toolSchema } from "~/server/admin/tools/schemas"
+import { githubClient } from "~/services/github"
 import { inngest } from "~/services/inngest"
 
 export const createTool = adminProcedure
@@ -68,7 +69,7 @@ export const deleteTools = adminProcedure
 
     // Send an event to the Inngest pipeline
     for (const tool of tools) {
-    await inngest.send({ name: "tool.deleted", data: { slug: tool.slug } })
+      await inngest.send({ name: "tool.deleted", data: { slug: tool.slug } })
     }
 
     return true
@@ -138,11 +139,28 @@ export const analyzeToolStack = adminProcedure
     const tool = await db.tool.findUniqueOrThrow({ where: { id } })
 
     // Get analysis and cache it
-    const { stack } = await analyzeRepositoryStack(tool.repositoryUrl)
+    const repo = await githubClient.queryRepository(tool.repositoryUrl)
 
-    // Update tool with new stack
-    return await db.tool.update({
+    if (!repo) {
+      throw new Error("Repository not found")
+    }
+
+    await db.tool.update({
       where: { id: tool.id },
-      data: { stacks: { set: stack.map(slug => ({ slug })) } },
+      data: {
+        stars: repo.stars,
+        forks: repo.forks,
+        score: repo.score,
+        firstCommitDate: repo.createdAt,
+        lastCommitDate: repo.pushedAt,
+        license: repo.license
+          ? {
+              connectOrCreate: {
+                where: { name: repo.license },
+                create: { name: repo.license, slug: slugify(repo.license).replace(/-0$/, "") },
+              },
+            }
+          : undefined,
+      },
     })
   })
