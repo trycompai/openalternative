@@ -26,5 +26,5 @@ export default function cloudflareLoader({ src, width, quality }: ImageLoaderPro
     return `${src}?w=${width}`
   }
 
-  return `/${src}?w=${width}&q=${quality}`
+  return `${src}?w=${width}&q=${quality}`
 }

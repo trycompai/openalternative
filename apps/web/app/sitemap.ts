@@ -27,7 +27,7 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
     findLicenseSlugs({}),
   ])
 
-  const pages = ["/about", "/advertise", "/submit", "/self-hosted"]
+  const pages = ["/submit", "/self-hosted"]
   const now = new Date()
 
   return [
@@ -35,11 +35,7 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
     createEntry("", now, { changeFrequency: "daily", priority: 1 }),
 
     // Static pages
-    ...pages.map(p => createEntry(p, now, { changeFrequency: "monthly" })),
-
-    // Posts
-    createEntry("/blog", now),
-    ...posts.map(p => createEntry(`/blog/${p._meta.path}`, new Date(p.updatedAt ?? p.publishedAt))),
+    ...pages.map(p => createEntry(p, now, { changeFrequency: "weekly" })),
 
     // Tools
     ...tools.map(t => createEntry(`/${t.slug}`, t.updatedAt)),
@@ -55,10 +51,6 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
     // Alternatives
     createEntry("/alternatives", now),
     ...alternatives.map(a => createEntry(`/alternatives/${a.slug}`, a.updatedAt)),
-
-    // Stacks
-    createEntry("/stacks", now),
-    ...stacks.map(l => createEntry(`/stacks/${l.slug}`, l.updatedAt)),
 
     // Topics
     createEntry("/topics", now),
