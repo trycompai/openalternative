@@ -67,8 +67,8 @@ const getMetadata = (tool: ToolOne, success: boolean): Metadata => {
   }
 
   return {
-    title: `Choose a plan for ${tool.name}`,
-    description: `Maximize ${tool.name}'s impact from day one. Select a package that suits your goals - from free listing to premium features.`,
+    title: `Thanks, we'll review your submission`,
+    description: `We'll review your submission and get back to you shortly.`,
   }
 }
 
@@ -109,19 +109,13 @@ export default async function SubmitPackages(props: PageProps) {
         </div>
       )}
 
-      <Stats className="my-4" />
-
-      {config.ads.testimonials.map(testimonial => (
-        <Testimonial key={testimonial.quote} {...testimonial} className="my-4" />
-      ))}
-
       <Intro alignment="center">
         <IntroTitle size="h3">Have questions?</IntroTitle>
 
         <Prose>
           <p>
             If you have any questions, please contact us at{" "}
-            <Link href={`mailto:${config.site.email}`}>{config.site.email}</Link>.
+            <Link href={"mailto:hello@fossalternative.com"}>hello@fossalternative.com</Link>.
           </p>
         </Prose>
       </Intro>
