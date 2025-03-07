@@ -26,5 +26,5 @@ export default function cloudflareLoader({ src, width, quality }: ImageLoaderPro
     return `${src}?w=${width}`
   }
 
-  return `/cdn-cgi/image/${getParamsString({ width, quality })}/${normalizeSrc(src)}`
+  return `${src}?w=${width}`
 }
