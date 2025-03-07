@@ -81,6 +81,7 @@ export default async function AlternativePage(props: PageProps) {
 
   const medalColors = ["text-amber-500", "text-slate-400", "text-orange-700"]
   const { title } = getMetadata(alternative)
+  const year = new Date().getFullYear()
 
   // Sort the categories by count
   const categories = Object.values(
@@ -125,7 +126,9 @@ export default async function AlternativePage(props: PageProps) {
       />
 
       <Intro>
-        <IntroTitle>Free & Open Source {alternative.name} Alternatives</IntroTitle>
+        <IntroTitle>
+          Free & Open Source {alternative.name} Alternatives in {year}
+        </IntroTitle>
 
         <IntroDescription className="max-w-4xl">
           {alternative._count.tools

@@ -23,7 +23,7 @@ export default async function Image({ params }: PageProps) {
 
   return new ImageResponse(
     <OgBase
-      name={`Open Source ${alternative.name} Alternatives`}
+      name={`Free & Open Source ${alternative.name} Alternatives`}
       description={alternative.description}
       faviconUrl={alternative.faviconUrl}
     />,

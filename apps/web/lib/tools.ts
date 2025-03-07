@@ -17,10 +17,10 @@ export const getToolSuffix = (tool: Pick<Tool, "alternatives" | "tagline">) => {
       suffix = `${tool.tagline}`
       break
     case 1:
-      suffix = `Open Source ${tool.alternatives[0].name} Alternative`
+      suffix = `Free & Open Source ${tool.alternatives[0].name} Alternative`
       break
     default:
-      suffix = `Open Source Alternative to ${joinAsSentence(tool.alternatives.map(({ name }) => name))}`
+      suffix = `Free & Open Source Alternative to ${joinAsSentence(tool.alternatives.map(({ name }) => name))}`
   }
 
   return suffix
