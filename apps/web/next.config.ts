@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
 
   async rewrites() {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-    const posthogUrl = process.env.NEXT_PUBLIC_POSTHOG_HOST
+    const posthogUrl = process.env.NEXT_PUBLIC_POSTHOG_API_HOST || 'https://us.i.posthog.com'
 
     return [
       // RSS rewrites

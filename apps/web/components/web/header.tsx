@@ -19,7 +19,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "~/components/common/dropdown-menu"
-import { BrandBlueskyIcon } from "~/components/common/icons/brand-bluesky"
 import { BrandGitHubIcon } from "~/components/common/icons/brand-github"
 import { BrandXIcon } from "~/components/common/icons/brand-x"
 import { Link } from "~/components/common/link"
@@ -119,7 +118,6 @@ export const Header = ({ children, className, ...props }: ComponentProps<typeof 
           </DropdownMenu>
 
           <NavLink href="/alternatives">Alternatives</NavLink>
-          <NavLink href="/advertise">Advertise</NavLink>
         </nav>
 
         <Stack size="sm" className="max-sm:hidden">
@@ -134,15 +132,6 @@ export const Header = ({ children, className, ...props }: ComponentProps<typeof 
             title="Follow us on X"
           >
             <BrandXIcon className="size-4" />
-          </NavLink>
-
-          <NavLink
-            href={config.links.bluesky}
-            target="_blank"
-            rel="nofollow noreferrer"
-            title="Follow us on Bluesky"
-          >
-            <BrandBlueskyIcon className="size-4" />
           </NavLink>
 
           <NavLink

@@ -15,7 +15,7 @@ const limiters = {
   submission: new Ratelimit({
     redis,
     analytics: true,
-    limiter: Ratelimit.slidingWindow(3, "24 h"), // 3 submissions per day
+    limiter: Ratelimit.slidingWindow(10, "24 h"), // 10 submissions per day
   }),
 
   report: new Ratelimit({

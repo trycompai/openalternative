@@ -30,8 +30,8 @@ const getMetadata = (category: CategoryOne): Metadata => {
   const name = category.label || `${category.name} Tools`
 
   return {
-    title: `Open Source ${name}`,
-    description: `A curated collection of the ${category._count.tools} best open source ${name} for inspiration and reference. Each listing includes a website screenshot along with a detailed review of its features.`,
+    title: `Free & Open Source ${name}`,
+    description: `A collection of the ${category._count.tools} best free & open source ${name}. Find inspiration, screenshots and detailed reviews for every listing.`,
   }
 }
 

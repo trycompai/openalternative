@@ -9,8 +9,8 @@ import { config } from "~/config"
 import { metadataConfig } from "~/config/metadata"
 
 export const metadata: Metadata = {
-  title: "Submit your Open Source Software",
-  description: `Help us grow the list of open source alternatives to proprietary software. Contribute to ${config.site.name} by submitting a new open source alternative.`,
+  title: "Submit Free & Open Source Software",
+  description: `Grow our list of free & open source alternatives. Contribute to ${config.site.name} by submitting a new free & open source alternative.`,
   openGraph: { ...metadataConfig.openGraph, url: "/submit" },
   alternates: { ...metadataConfig.alternates, canonical: "/submit" },
 }
@@ -32,14 +32,13 @@ export default async function SubmitPage() {
           <Card hover={false}>
             <Prose className="text-sm/normal">
               <p>
-                <strong>Note:</strong> Submission alone does not guarantee a feature. Please make
-                sure the software you're submitting is:
+                <strong>Note:</strong> Please make sure that the software you're submitting is:
               </p>
 
               <ul className="[&_li]:p-0 list-inside p-0">
-                <li>Open source</li>
+                <li>Free & Open source</li>
                 <li>Actively maintained</li>
-                <li>Hosted publicly on GitHub</li>
+                <li>Hosted on GitHub</li>
                 <li>
                   An <Link href="/alternatives">alternative to popular software</Link>
                 </li>

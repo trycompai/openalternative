@@ -92,13 +92,13 @@ export const RepositoryDetails = ({ className, tool, ...props }: RepositoryDetai
             eventName="click_repository"
             eventProps={{ url: tool.repositoryUrl }}
           >
-            View Repository
+            Go to GitHub Repository
           </ExternalLink>
         </Button>
       )}
 
       <p className="text-muted-foreground/75 text-[11px]">
-        Fetched automatically from GitHub{" "}
+        We fetched this data automatically from GitHub{" "}
         <time dateTime={formatISO(tool.updatedAt)} className="font-medium text-muted-foreground">
           {formatDistanceToNowStrict(tool.updatedAt, { addSuffix: true })}
         </time>

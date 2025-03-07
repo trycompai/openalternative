@@ -13,9 +13,9 @@ type PageProps = {
 }
 
 export const metadata: Metadata = {
-  title: "Self-hosted Alternatives to Popular Software",
+  title: "Self-Hosted Alternatives to Paid Software",
   description:
-    "Self-hosting involves running and managing applications on your own server(s) rather than utilizing SaaS providers. Below is a list of services and web applications that can be hosted on your own server(s).",
+    "Below is a list of free & open source projects, services and web applications that can be hosted on your own infrastructure.",
   openGraph: { ...metadataConfig.openGraph, url: "/self-hosted" },
   alternates: { ...metadataConfig.alternates, canonical: "/self-hosted" },
 }

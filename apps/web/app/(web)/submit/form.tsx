@@ -39,7 +39,7 @@ export const SubmitForm = ({ className, ...props }: ComponentProps<"form">) => {
       submitterName: session?.user.name || "",
       submitterEmail: session?.user.email || "",
       submitterNote: "",
-      newsletterOptIn: true,
+      newsletterOptIn: false,
     },
   })
 
@@ -127,7 +127,7 @@ export const SubmitForm = ({ className, ...props }: ComponentProps<"form">) => {
             <FormItem>
               <FormLabel isRequired>Website URL:</FormLabel>
               <FormControl>
-                <Input type="url" size="lg" placeholder="https://posthog.com" {...field} />
+                <Input type="url" size="lg" placeholder="https://trycomp.ai" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -144,7 +144,7 @@ export const SubmitForm = ({ className, ...props }: ComponentProps<"form">) => {
                 <Input
                   type="url"
                   size="lg"
-                  placeholder="https://github.com/posthog/posthog"
+                  placeholder="https://github.com/trycompai/comp"
                   {...field}
                 />
               </FormControl>
@@ -167,20 +167,6 @@ export const SubmitForm = ({ className, ...props }: ComponentProps<"form">) => {
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="newsletterOptIn"
-          render={({ field }) => (
-            <FormItem className="flex-row items-center col-span-full">
-              <FormControl>
-                <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-              </FormControl>
-              <FormLabel className="font-normal">I'd like to receive free email updates</FormLabel>
               <FormMessage />
             </FormItem>
           )}

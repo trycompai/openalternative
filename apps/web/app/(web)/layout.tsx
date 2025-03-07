@@ -23,8 +23,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
         url: `${url}/`,
         sameAs: [
           config.links.twitter,
-          config.links.bluesky,
-          config.links.mastodon,
           config.links.linkedin,
           config.links.github,
         ],
@@ -40,8 +38,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
       {
         "@type": "Person",
         "@id": `${url}/#/schema/person/1`,
-        name: "Piotr Kulpinski",
-        sameAs: [config.links.author],
+        name: "Lewis Carhart",
+        sameAs: [
+          config.links.author,
+          "https://x.com/lewisbuildsai",
+          "www.linkedin.com/in/lewiscarhart",
+          "https://github.com/carhartlewis",
+        ],
       },
       {
         "@type": "WebSite",

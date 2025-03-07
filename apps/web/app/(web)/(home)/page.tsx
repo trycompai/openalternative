@@ -6,8 +6,6 @@ import {
   AlternativePreview,
   AlternativePreviewSkeleton,
 } from "~/components/web/alternatives/alternative-preview"
-import { NewsletterForm } from "~/components/web/newsletter-form"
-import { NewsletterProof } from "~/components/web/newsletter-proof"
 import { ToolQuerySkeleton } from "~/components/web/tools/tool-query"
 import { Intro, IntroDescription, IntroTitle } from "~/components/web/ui/intro"
 import { config } from "~/config"
@@ -31,14 +29,6 @@ export default function Home({ searchParams }: PageProps) {
             <CountBadge />
           </Suspense>
         </Intro>
-
-        <NewsletterForm
-          size="lg"
-          className="max-w-sm mx-auto items-center text-center"
-          buttonProps={{ children: "Join our community", size: "md", variant: "fancy" }}
-        >
-          <NewsletterProof />
-        </NewsletterForm>
       </section>
 
       <Suspense fallback={<ToolQuerySkeleton />}>

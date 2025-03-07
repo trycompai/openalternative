@@ -5,7 +5,6 @@ import { db } from "@openalternative/db"
 import { headers } from "next/headers"
 import { createServerAction } from "zsa"
 import { subscribeToNewsletter } from "~/actions/subscribe"
-import { isProd } from "~/env"
 import { auth } from "~/lib/auth"
 import { getIP, isRateLimited } from "~/lib/rate-limiter"
 import { submitToolSchema } from "~/server/schemas"
@@ -83,7 +82,9 @@ export const submitTool = createServerAction()
     })
 
     // Send an event to the Inngest pipeline
-    isProd && (await inngest.send({ name: "tool.submitted", data: { slug } }))
+    await inngest.send({ name: "tool.submitted", data: { slug } }).then(async () => {
+      await inngest.send({ name: "tool.expedited", data: { slug: tool.slug } })
+    })
 
     return tool
   })

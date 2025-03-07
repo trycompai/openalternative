@@ -41,7 +41,7 @@ export const EmailWrapper = ({ to, subject, signature, children, ...props }: Ema
               <Text>
                 Best,
                 <br />
-                Piotr from {config.site.name}
+                Lewis from {config.site.name}
               </Text>
             )}
 
@@ -54,7 +54,7 @@ export const EmailWrapper = ({ to, subject, signature, children, ...props }: Ema
             </Text>
 
             <Text className="text-xs/normal text-gray-500">
-              Any questions? Please feel free to reach us at {config.site.email}.
+              Any questions? Please feel free to reach us at hello@trycomp.ai.
             </Text>
           </Container>
         </Body>

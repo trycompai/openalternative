@@ -40,12 +40,6 @@ const AdCard = async ({ className, type, ...props }: AdCardProps) => {
         eventName="click_ad"
         eventProps={{ url: ad.websiteUrl, type: ad.type }}
       >
-        {!isDefault && (
-          <CardBadges>
-            <Badge variant="outline">Ad</Badge>
-          </CardBadges>
-        )}
-
         <CardHeader>
           <Favicon src={ad.faviconUrl} title={ad.name} />
 
@@ -71,11 +65,7 @@ const AdCard = async ({ className, type, ...props }: AdCardProps) => {
 const AdCardSkeleton = ({ className }: ComponentProps<typeof Card>) => {
   return (
     <Card hover={false} className={cx("items-stretch select-none", className)}>
-      <CardBadges>
-        <Badge variant="outline">Ad</Badge>
-      </CardBadges>
-
-      <CardHeader>
+        <CardHeader>
         <Favicon src="/favicon.png" className="animate-pulse opacity-50" />
 
         <H4 className="w-2/3">

@@ -1,0 +1,1836 @@
+{
+  "id": "3SFk9SQe7GeL",
+  "name": "flatten",
+  "path": [
+    "/"
+  ],
+  "tech": null,
+  "edges": [],
+  "inComponent": null,
+  "childs": [
+    {
+      "id": "2XoU6rdRXD1h",
+      "name": "@bubba/analytics",
+      "path": [
+        "/packages/analytics/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "ADTi2LOMorwC",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "posthog",
+        "react",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "TypeScript": 4
+      },
+      "dependencies": [
+        [
+          "npm",
+          "posthog-js",
+          "^1.215.3"
+        ],
+        [
+          "npm",
+          "posthog-node",
+          "^4.4.1"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "TlUUHAtL3tUW",
+      "name": "@bubba/db",
+      "path": [
+        "/packages/db/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "ky8QWypc5D59",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "6u98QxqNPfIQ",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "neondb",
+        "nodejs",
+        "prisma",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "Prisma": 9,
+        "JavaScript": 3,
+        "TypeScript": 4
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@auth/prisma-adapter",
+          "^2.7.4"
+        ],
+        [
+          "npm",
+          "@neondatabase/serverless",
+          "^0.10.4"
+        ],
+        [
+          "npm",
+          "@prisma/adapter-neon",
+          "^6.3.1"
+        ],
+        [
+          "npm",
+          "@prisma/client",
+          "^6.3.1"
+        ],
+        [
+          "npm",
+          "@prisma/extension-accelerate",
+          "^1.2.2"
+        ],
+        [
+          "npm",
+          "prisma",
+          "^6.3.1"
+        ],
+        [
+          "npm",
+          "@bubba/tsconfig",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.3"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "anEnQTc3LkUM",
+      "name": "@bubba/email",
+      "path": [
+        "/packages/email/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "ysBIrVlv7k13",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "RTF6pkfbI9Iw",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": "opTR1bLF3Eer",
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "react",
+        "reactemail",
+        "typescript",
+        "vercel"
+      ],
+      "languages": {
+        "TypeScript": 14,
+        "JSON": 3
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@bubba/ui",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@bubba/utils",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@react-email/components",
+          "0.0.31"
+        ],
+        [
+          "npm",
+          "@react-email/render",
+          "0.0.10"
+        ],
+        [
+          "npm",
+          "@react-email/tailwind",
+          "1.0.4"
+        ],
+        [
+          "npm",
+          "date-fns",
+          "^4.1.0"
+        ],
+        [
+          "npm",
+          "react-email",
+          "3.0.4"
+        ],
+        [
+          "npm",
+          "responsive-react-email",
+          "^0.0.5"
+        ],
+        [
+          "npm",
+          "react",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-dom",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.2"
+        ],
+        [
+          "npm",
+          "@types/react",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "@types/react-dom",
+          "^19.0.0"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "mObHZBRE1Art",
+      "name": "@bubba/integrations",
+      "path": [
+        "/packages/integrations/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "aCh2Gz6RgLLz",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "react",
+        "slack",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "TypeScript": 10
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@ai-sdk/openai",
+          "^0.0.66"
+        ],
+        [
+          "npm",
+          "@slack/bolt",
+          "^3.22.0"
+        ],
+        [
+          "npm",
+          "@slack/web-api",
+          "^7.8.0"
+        ],
+        [
+          "npm",
+          "ai",
+          "^3.4.33"
+        ],
+        [
+          "npm",
+          "sharp",
+          "^0.33.5"
+        ],
+        [
+          "npm",
+          "zod",
+          "^3.24.2"
+        ],
+        [
+          "npm",
+          "@types/node",
+          "^22.13.2"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.3"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "CRnzr0FUIcnw",
+      "name": "@bubba/kv",
+      "path": [
+        "/packages/kv/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "2HCeJT137eMB",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": "lx1GjmvCmeiG",
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "typescript",
+        "upstash",
+        "upstash.redis"
+      ],
+      "languages": {
+        "JSON": 2,
+        "TypeScript": 1
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@upstash/redis",
+          "^1.34.2"
+        ],
+        [
+          "npm",
+          "server-only",
+          "0.0.1"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "j63ltSGJBakX",
+      "name": "@bubba/notifications",
+      "path": [
+        "/packages/notifications/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "o103EhYXHtPu",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "novu",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "TypeScript": 1
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@novu/node",
+          "^2.0.1"
+        ],
+        [
+          "npm",
+          "nanoid",
+          "5.1.0"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.6.3"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "6u98QxqNPfIQ",
+      "name": "@bubba/tsconfig",
+      "path": [
+        "/packages/tsconfig/package.json"
+      ],
+      "tech": null,
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nodejs"
+      ],
+      "languages": {
+        "JSON": 4
+      },
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "ysBIrVlv7k13",
+      "name": "@bubba/ui",
+      "path": [
+        "/packages/ui/package.json"
+      ],
+      "tech": null,
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "css",
+        "nodejs",
+        "react",
+        "tailwind",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "JavaScript": 1,
+        "TypeScript": 73,
+        "CSS": 2
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@mui/icons-material",
+          "^6.1.6"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-accordion",
+          "^1.2.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-alert-dialog",
+          "^1.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-avatar",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-checkbox",
+          "^1.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-collapsible",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-context-menu",
+          "^2.2.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-dialog",
+          "^1.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-dropdown-menu",
+          "^2.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-hover-card",
+          "^1.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-icons",
+          "^1.3.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-label",
+          "^2.1.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-navigation-menu",
+          "^1.2.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-popover",
+          "^1.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-progress",
+          "^1.1.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-radio-group",
+          "^1.2.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-scroll-area",
+          "^1.2.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-select",
+          "^2.1.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-separator",
+          "^1.1.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-slider",
+          "^1.2.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-slot",
+          "^1.1.0"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-switch",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-tabs",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-toast",
+          "^1.2.2"
+        ],
+        [
+          "npm",
+          "@radix-ui/react-tooltip",
+          "^1.1.3"
+        ],
+        [
+          "npm",
+          "@tailwindcss/typography",
+          "^0.5.16"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-bold",
+          "2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-link",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-placeholder",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-underline",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@tiptap/pm",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@tiptap/react",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@tiptap/starter-kit",
+          "^2.9.1"
+        ],
+        [
+          "npm",
+          "@uidotdev/usehooks",
+          "^2.4.1"
+        ],
+        [
+          "npm",
+          "class-variance-authority",
+          "^0.7.0"
+        ],
+        [
+          "npm",
+          "clsx",
+          "^2.1.1"
+        ],
+        [
+          "npm",
+          "cmdk",
+          "0.2.1"
+        ],
+        [
+          "npm",
+          "date-fns",
+          "^4.1.0"
+        ],
+        [
+          "npm",
+          "embla-carousel-react",
+          "^8.3.0"
+        ],
+        [
+          "npm",
+          "input-otp",
+          "^1.2.4"
+        ],
+        [
+          "npm",
+          "jsonfile",
+          "^6.1.0"
+        ],
+        [
+          "npm",
+          "lucide-react",
+          "^0.447.0"
+        ],
+        [
+          "npm",
+          "postcss",
+          "^8.4.47"
+        ],
+        [
+          "npm",
+          "react-day-picker",
+          "8.10.1"
+        ],
+        [
+          "npm",
+          "react-dropzone",
+          "^14.3.5"
+        ],
+        [
+          "npm",
+          "react-icons",
+          "^5.3.0"
+        ],
+        [
+          "npm",
+          "react-number-format",
+          "^5.4.2"
+        ],
+        [
+          "npm",
+          "react-resizable-panels",
+          "^2.1.7"
+        ],
+        [
+          "npm",
+          "recharts",
+          "^2.12.7"
+        ],
+        [
+          "npm",
+          "tailwind-merge",
+          "2.5.3"
+        ],
+        [
+          "npm",
+          "tailwindcss",
+          "^3.4.13"
+        ],
+        [
+          "npm",
+          "tailwindcss-animate",
+          "^1.0.7"
+        ],
+        [
+          "npm",
+          "use-callback-ref",
+          "^1.3.3"
+        ],
+        [
+          "npm",
+          "vaul",
+          "^1.0.0"
+        ],
+        [
+          "npm",
+          "autoprefixer",
+          "^10.4.20"
+        ],
+        [
+          "npm",
+          "react",
+          "19.0.0"
+        ],
+        [
+          "npm",
+          "react-dom",
+          "19.0.0"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.2"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "RTF6pkfbI9Iw",
+      "name": "@bubba/utils",
+      "path": [
+        "/packages/utils/package.json"
+      ],
+      "tech": null,
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nodejs",
+        "typescript"
+      ],
+      "languages": {
+        "JSON": 2,
+        "TypeScript": 3
+      },
+      "dependencies": [
+        [
+          "npm",
+          "typescript",
+          "^5.5.4"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "aRGkw3rMudl7",
+      "name": "AWS",
+      "path": [
+        "/package.json",
+        "/apps/app/package.json"
+      ],
+      "tech": "aws",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "aws"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "p6RRxU6Ayt95",
+      "name": "AWS S3",
+      "path": [
+        "/package.json",
+        "/apps/app/package.json"
+      ],
+      "tech": "aws.s3",
+      "edges": [],
+      "inComponent": "aRGkw3rMudl7",
+      "childs": [],
+      "techs": [
+        "aws.s3"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "S9SK6ay9UBnD",
+      "name": "GitHub",
+      "path": [
+        "/package.json"
+      ],
+      "tech": "github",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "ky8QWypc5D59",
+      "name": "NeonDB",
+      "path": [
+        "/packages/db/package.json"
+      ],
+      "tech": "neondb",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "o103EhYXHtPu",
+      "name": "Novy",
+      "path": [
+        "/packages/notifications/package.json"
+      ],
+      "tech": "novu",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "ADTi2LOMorwC",
+      "name": "PostHog",
+      "path": [
+        "/apps/app/package.json",
+        "/apps/web/package.json",
+        "/packages/analytics/package.json"
+      ],
+      "tech": "posthog",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "posthog"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "IzUC7jONXlMj",
+      "name": "Resend",
+      "path": [
+        "/apps/app/package.json",
+        "/apps/web/package.json"
+      ],
+      "tech": "resend",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "resend"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "aCh2Gz6RgLLz",
+      "name": "Slack",
+      "path": [
+        "/packages/integrations/package.json"
+      ],
+      "tech": "slack",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "q5oixxQlbuKz",
+      "name": "Stripe",
+      "path": [
+        "/apps/app/package.json"
+      ],
+      "tech": "stripe",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "lx1GjmvCmeiG",
+      "name": "Upstash",
+      "path": [
+        "/apps/app/package.json",
+        "/packages/kv/package.json"
+      ],
+      "tech": "upstash",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "upstash"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "2HCeJT137eMB",
+      "name": "Upstash Redis",
+      "path": [
+        "/packages/kv/package.json"
+      ],
+      "tech": "upstash.redis",
+      "edges": [],
+      "inComponent": "lx1GjmvCmeiG",
+      "childs": [],
+      "techs": [],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "opTR1bLF3Eer",
+      "name": "Vercel",
+      "path": [
+        "/apps/web/package.json",
+        "/packages/email/package.json"
+      ],
+      "tech": "vercel",
+      "edges": [],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "vercel"
+      ],
+      "languages": {},
+      "dependencies": [],
+      "reason": []
+    },
+    {
+      "id": "5fXRBj7xGayu",
+      "name": "comp",
+      "path": [
+        "/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "p6RRxU6Ayt95",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "S9SK6ay9UBnD",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": "aRGkw3rMudl7",
+      "childs": [],
+      "techs": [
+        "aws",
+        "aws.s3",
+        "d3js",
+        "github",
+        "github.actions",
+        "nodejs",
+        "typescript"
+      ],
+      "languages": {
+        "YAML": 3,
+        "Markdown": 17,
+        "JSON": 33,
+        "TOML": 1
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@aws-sdk/client-s3",
+          "^3.758.0"
+        ],
+        [
+          "npm",
+          "@aws-sdk/client-securityhub",
+          "^3.758.0"
+        ],
+        [
+          "npm",
+          "@manypkg/cli",
+          "^0.23.0"
+        ],
+        [
+          "npm",
+          "@nangohq/node",
+          "^0.53.2"
+        ],
+        [
+          "npm",
+          "@types/d3",
+          "^7.4.3"
+        ],
+        [
+          "npm",
+          "@types/react",
+          "19.0.10"
+        ],
+        [
+          "npm",
+          "ai",
+          "3.4.33"
+        ],
+        [
+          "npm",
+          "d3",
+          "^7.9.0"
+        ],
+        [
+          "npm",
+          "gitmoji",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "gray-matter",
+          "^4.0.3"
+        ],
+        [
+          "npm",
+          "sharp",
+          "^0.33.5"
+        ],
+        [
+          "npm",
+          "use-debounce",
+          "^10.0.4"
+        ],
+        [
+          "npm",
+          "@biomejs/biome",
+          "1.9.4"
+        ],
+        [
+          "npm",
+          "@types/lodash",
+          "^4.17.16"
+        ],
+        [
+          "npm",
+          "turbo",
+          "^2.4.4"
+        ],
+        [
+          "npm",
+          "typescript",
+          "5.7.3"
+        ],
+        [
+          "githubAction",
+          "actions/checkout",
+          "v4"
+        ],
+        [
+          "githubAction",
+          "oven-sh/setup-bun",
+          "v1"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "S3Gijsc1IuTk",
+      "name": "comp.ai",
+      "path": [
+        "/apps/app/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "p6RRxU6Ayt95",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "ADTi2LOMorwC",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "IzUC7jONXlMj",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "q5oixxQlbuKz",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "j63ltSGJBakX",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "TlUUHAtL3tUW",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": "lx1GjmvCmeiG",
+      "childs": [],
+      "techs": [
+        "aws",
+        "aws.s3",
+        "bash",
+        "css",
+        "d3js",
+        "nextjs",
+        "nodejs",
+        "posthog",
+        "puppeteer",
+        "react",
+        "resend",
+        "stripe",
+        "tailwind",
+        "typescript",
+        "upstash"
+      ],
+      "languages": {
+        "Markdown": 1,
+        "JSON": 8,
+        "TypeScript": 419,
+        "JavaScript": 2,
+        "CSS": 1,
+        "Shell": 1
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@ai-sdk/openai",
+          "^1.1.12"
+        ],
+        [
+          "npm",
+          "@ai-sdk/provider",
+          "^1.0.7"
+        ],
+        [
+          "npm",
+          "@aws-sdk/client-s3",
+          "^3.758.0"
+        ],
+        [
+          "npm",
+          "@aws-sdk/s3-request-presigner",
+          "^3.758.0"
+        ],
+        [
+          "npm",
+          "@browserbasehq/sdk",
+          "^2.3.0"
+        ],
+        [
+          "npm",
+          "@bubba/notifications",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@date-fns/tz",
+          "^1.2.0"
+        ],
+        [
+          "npm",
+          "@hookform/resolvers",
+          "^3.10.0"
+        ],
+        [
+          "npm",
+          "@nangohq/frontend",
+          "^0.53.1"
+        ],
+        [
+          "npm",
+          "@novu/headless",
+          "^2.6.5"
+        ],
+        [
+          "npm",
+          "@novu/react",
+          "^2.6.5"
+        ],
+        [
+          "npm",
+          "@prisma/instrumentation",
+          "^6.3.1"
+        ],
+        [
+          "npm",
+          "@tanstack/react-query",
+          "^5.66.0"
+        ],
+        [
+          "npm",
+          "@tanstack/react-table",
+          "^8.21.2"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-table",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-table-cell",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-table-header",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/extension-table-row",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/pm",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/react",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@tiptap/starter-kit",
+          "^2.11.5"
+        ],
+        [
+          "npm",
+          "@trigger.dev/react-hooks",
+          "3.3.17"
+        ],
+        [
+          "npm",
+          "@trigger.dev/sdk",
+          "3.3.17"
+        ],
+        [
+          "npm",
+          "@types/d3",
+          "^7.4.3"
+        ],
+        [
+          "npm",
+          "@uploadthing/react",
+          "^7.2.0"
+        ],
+        [
+          "npm",
+          "@upstash/ratelimit",
+          "^2.0.5"
+        ],
+        [
+          "npm",
+          "ai",
+          "^4.1.41"
+        ],
+        [
+          "npm",
+          "argon2",
+          "^0.41.1"
+        ],
+        [
+          "npm",
+          "bun",
+          "^1.2.2"
+        ],
+        [
+          "npm",
+          "crypto",
+          "^1.0.1"
+        ],
+        [
+          "npm",
+          "d3",
+          "^7.9.0"
+        ],
+        [
+          "npm",
+          "dub",
+          "^0.46.29"
+        ],
+        [
+          "npm",
+          "framer-motion",
+          "^12.4.7"
+        ],
+        [
+          "npm",
+          "geist",
+          "^1.3.1"
+        ],
+        [
+          "npm",
+          "highlight.js",
+          "^11.11.1"
+        ],
+        [
+          "npm",
+          "ky",
+          "^1.7.5"
+        ],
+        [
+          "npm",
+          "languine",
+          "^3.0.4"
+        ],
+        [
+          "npm",
+          "marked",
+          "^15.0.7"
+        ],
+        [
+          "npm",
+          "next",
+          "^15.2.0"
+        ],
+        [
+          "npm",
+          "next-auth",
+          "^5.0.0-beta.25"
+        ],
+        [
+          "npm",
+          "next-international",
+          "^1.3.1"
+        ],
+        [
+          "npm",
+          "next-intl",
+          "^3.26.3"
+        ],
+        [
+          "npm",
+          "next-safe-action",
+          "^7.10.3"
+        ],
+        [
+          "npm",
+          "next-themes",
+          "^0.4.4"
+        ],
+        [
+          "npm",
+          "novel",
+          "^1.0.2"
+        ],
+        [
+          "npm",
+          "novu",
+          "^2.6.5"
+        ],
+        [
+          "npm",
+          "nuqs",
+          "^2.3.2"
+        ],
+        [
+          "npm",
+          "playwright-core",
+          "^1.50.1"
+        ],
+        [
+          "npm",
+          "posthog-js",
+          "^1.217.2"
+        ],
+        [
+          "npm",
+          "posthog-node",
+          "^4.5.2"
+        ],
+        [
+          "npm",
+          "puppeteer-core",
+          "^24.2.0"
+        ],
+        [
+          "npm",
+          "react",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-dom",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-hook-form",
+          "^7.54.2"
+        ],
+        [
+          "npm",
+          "react-hotkeys-hook",
+          "^4.6.1"
+        ],
+        [
+          "npm",
+          "react-intersection-observer",
+          "^9.15.1"
+        ],
+        [
+          "npm",
+          "react-markdown",
+          "^9.0.3"
+        ],
+        [
+          "npm",
+          "react-textarea-autosize",
+          "^8.5.7"
+        ],
+        [
+          "npm",
+          "react-use-draggable-scroll",
+          "^0.4.7"
+        ],
+        [
+          "npm",
+          "remark-gfm",
+          "^4.0.1"
+        ],
+        [
+          "npm",
+          "remark-parse",
+          "^11.0.0"
+        ],
+        [
+          "npm",
+          "resend",
+          "^4.1.2"
+        ],
+        [
+          "npm",
+          "sonner",
+          "^1.7.4"
+        ],
+        [
+          "npm",
+          "stripe",
+          "^17.6.0"
+        ],
+        [
+          "npm",
+          "ts-pattern",
+          "^5.6.2"
+        ],
+        [
+          "npm",
+          "uploadthing",
+          "^7.5.0"
+        ],
+        [
+          "npm",
+          "use-debounce",
+          "^10.0.4"
+        ],
+        [
+          "npm",
+          "use-long-press",
+          "^3.2.0"
+        ],
+        [
+          "npm",
+          "xml2js",
+          "^0.6.2"
+        ],
+        [
+          "npm",
+          "yarn",
+          "^1.22.22"
+        ],
+        [
+          "npm",
+          "zustand",
+          "^5.0.3"
+        ],
+        [
+          "npm",
+          "@bubba/db",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@trigger.dev/build",
+          "3.3.17"
+        ],
+        [
+          "npm",
+          "@types/node",
+          "^22.13.2"
+        ],
+        [
+          "npm",
+          "@types/react",
+          "19.0.10"
+        ],
+        [
+          "npm",
+          "@types/react-dom",
+          "19.0.4"
+        ],
+        [
+          "npm",
+          "postcss",
+          "^8.5.2"
+        ],
+        [
+          "npm",
+          "tailwindcss",
+          "^3.4.17"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.3"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "ggkyTCFj4x4X",
+      "name": "portal",
+      "path": [
+        "/apps/portal/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "ysBIrVlv7k13",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "TlUUHAtL3tUW",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": null,
+      "childs": [],
+      "techs": [
+        "nextjs",
+        "nodejs",
+        "react",
+        "tailwind",
+        "typescript"
+      ],
+      "languages": {
+        "Markdown": 1,
+        "TypeScript": 37,
+        "JSON": 2,
+        "JavaScript": 2
+      },
+      "dependencies": [
+        [
+          "npm",
+          "better-auth",
+          "^1.1.18"
+        ],
+        [
+          "npm",
+          "next",
+          "^15.2.0"
+        ],
+        [
+          "npm",
+          "react",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-dom",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-otp-input",
+          "^3.1.1"
+        ],
+        [
+          "npm",
+          "@bubba/ui",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@bubba/db",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@types/node",
+          "^22.13.2"
+        ],
+        [
+          "npm",
+          "@types/react",
+          "^19.0.8"
+        ],
+        [
+          "npm",
+          "@types/react-dom",
+          "^19.0.3"
+        ],
+        [
+          "npm",
+          "postcss",
+          "^8.5.2"
+        ],
+        [
+          "npm",
+          "tailwindcss",
+          "^3.4.17"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.3"
+        ]
+      ],
+      "reason": []
+    },
+    {
+      "id": "aCBqkwHP8FBG",
+      "name": "web",
+      "path": [
+        "/apps/web/package.json"
+      ],
+      "tech": null,
+      "edges": [
+        {
+          "target": "ADTi2LOMorwC",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "IzUC7jONXlMj",
+          "read": true,
+          "write": true
+        },
+        {
+          "target": "2XoU6rdRXD1h",
+          "read": true,
+          "write": true
+        }
+      ],
+      "inComponent": "opTR1bLF3Eer",
+      "childs": [],
+      "techs": [
+        "css",
+        "nextjs",
+        "nodejs",
+        "posthog",
+        "react",
+        "resend",
+        "tailwind",
+        "typescript",
+        "vercel"
+      ],
+      "languages": {
+        "Markdown": 1,
+        "TypeScript": 43,
+        "JSON": 3,
+        "JavaScript": 2,
+        "CSS": 1
+      },
+      "dependencies": [
+        [
+          "npm",
+          "@next/third-parties",
+          "^15.1.7"
+        ],
+        [
+          "npm",
+          "@t3-oss/env-nextjs",
+          "^0.11.1"
+        ],
+        [
+          "npm",
+          "@trigger.dev/sdk",
+          "^3.3.15"
+        ],
+        [
+          "npm",
+          "class-variance-authority",
+          "^0.7.1"
+        ],
+        [
+          "npm",
+          "clsx",
+          "^2.1.1"
+        ],
+        [
+          "npm",
+          "framer-motion",
+          "^11.18.2"
+        ],
+        [
+          "npm",
+          "ky",
+          "^1.7.5"
+        ],
+        [
+          "npm",
+          "lucide-react",
+          "^0.469.0"
+        ],
+        [
+          "npm",
+          "motion",
+          "^11.18.2"
+        ],
+        [
+          "npm",
+          "next",
+          "^15.2.0"
+        ],
+        [
+          "npm",
+          "next-turnstile",
+          "^1.0.2"
+        ],
+        [
+          "npm",
+          "posthog-js",
+          "^1.217.2"
+        ],
+        [
+          "npm",
+          "posthog-node",
+          "^4.5.2"
+        ],
+        [
+          "npm",
+          "react",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-dom",
+          "^19.0.0"
+        ],
+        [
+          "npm",
+          "react-wrap-balancer",
+          "^1.1.1"
+        ],
+        [
+          "npm",
+          "resend",
+          "^4.1.2"
+        ],
+        [
+          "npm",
+          "tailwind-merge",
+          "^2.6.0"
+        ],
+        [
+          "npm",
+          "tailwindcss-animate",
+          "^1.0.7"
+        ],
+        [
+          "npm",
+          "uuid",
+          "^11.0.5"
+        ],
+        [
+          "npm",
+          "@bubba/analytics",
+          "workspace:*"
+        ],
+        [
+          "npm",
+          "@trigger.dev/build",
+          "^3.3.15"
+        ],
+        [
+          "npm",
+          "@types/node",
+          "^22.13.2"
+        ],
+        [
+          "npm",
+          "@types/react",
+          "^19.0.8"
+        ],
+        [
+          "npm",
+          "@types/react-dom",
+          "^19.0.3"
+        ],
+        [
+          "npm",
+          "postcss",
+          "^8.5.2"
+        ],
+        [
+          "npm",
+          "tailwindcss",
+          "^3.4.17"
+        ],
+        [
+          "npm",
+          "typescript",
+          "^5.7.3"
+        ]
+      ],
+      "reason": []
+    }
+  ],
+  "techs": [],
+  "languages": {},
+  "dependencies": [],
+  "reason": []
+}

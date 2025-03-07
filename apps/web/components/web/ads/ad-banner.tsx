@@ -30,10 +30,6 @@ export const AdBanner = async ({ className, ...props }: ComponentProps<typeof Co
           eventName="click_ad"
           eventProps={{ url: ad.websiteUrl, type: ad.type }}
         >
-          <Badge variant="outline" className="max-sm:order-last">
-            Ad
-          </Badge>
-
           <div className="text-xs leading-tight text-secondary-foreground mr-auto md:text-sm">
             {ad.faviconUrl && (
               <Image

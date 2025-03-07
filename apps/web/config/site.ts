@@ -1,14 +1,14 @@
 import { env } from "~/env"
 
 export const siteConfig = {
-  name: "OpenAlternative",
-  tagline: "Open Source Alternatives to Popular Software",
+  name: "FOSS Alternative",
+  tagline: "Free & Open Source Alternatives of Popular Software",
   description:
-    "A curated collection of the best open source alternatives to everyday SaaS products. Save money with reliable tools hand-picked for you.",
+    "The #1 collection of the best free & open source alternatives of popular software. Find the best hand-picked free & open source software.",
   email: env.NEXT_PUBLIC_SITE_EMAIL,
   url: env.NEXT_PUBLIC_SITE_URL,
 
   alphabet: "abcdefghijklmnopqrstuvwxyz",
 
-  affiliateUrl: "https://go.openalternative.co",
+  affiliateUrl: "https://go.trycomp.ai",
 }

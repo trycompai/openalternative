@@ -2,14 +2,12 @@ import { siteConfig } from "~/config/site"
 
 export const linksConfig = {
   madeWith: "https://dirstarter.com",
-  author: "https://kulpinski.pl",
-  twitter: "https://x.com/ossalternative",
+  author: "https://trycomp.ai",
+  twitter: "https://x.com/trycompai",
   bluesky: "https://bsky.app/profile/openalternative.co",
   mastodon: "https://mastodon.social/@openalternative",
-  linkedin: "https://linkedin.com/company/openalternative",
-  github: "https://github.com/piotrkulpinski/openalternative",
-  medium: "https://medium.com/openalternative",
-  analytics: "https://go.openalternative.co/analytics",
+  linkedin: "https://linkedin.com/company/trycompai",
+  github: "https://github.com/trycompai/comp",
   feeds: [
     { title: "Open Source Tools", url: `${siteConfig.url}/rss/tools.xml` },
     { title: "Proprietary Alternatives", url: `${siteConfig.url}/rss/alternatives.xml` },

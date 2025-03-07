@@ -4,7 +4,6 @@ import { slugify } from "@curiousleaf/utils"
 import { db } from "@openalternative/db"
 import { revalidateTag } from "next/cache"
 import { z } from "zod"
-import { isProd } from "~/env"
 import { uploadFavicon } from "~/lib/media"
 import { adminProcedure } from "~/lib/safe-actions"
 import { alternativeSchema } from "~/server/admin/alternatives/schemas"
@@ -24,8 +23,7 @@ export const createAlternative = adminProcedure
 
     revalidateTag("alternatives")
 
-    isProd &&
-      (await inngest.send({ name: "alternative.created", data: { slug: alternative.slug } }))
+    await inngest.send({ name: "alternative.created", data: { slug: alternative.slug } })
 
     return alternative
   })
@@ -64,8 +62,7 @@ export const deleteAlternatives = adminProcedure
     revalidateTag("alternatives")
 
     for (const alternative of alternatives) {
-      isProd &&
-        (await inngest.send({ name: "alternative.deleted", data: { slug: alternative.slug } }))
+      await inngest.send({ name: "alternative.deleted", data: { slug: alternative.slug } })
     }
 
     return true

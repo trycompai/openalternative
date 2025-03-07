@@ -30,8 +30,8 @@ const getMetadata = (category: CategoryOne): Metadata => {
   const name = category.label || `${category.name} Tools`
 
   return {
-    title: `Best Self-hosted ${name}`,
-    description: `A curated collection of the best self-hosted ${name}. Each listing includes a website screenshot along with a detailed review of its features.`,
+    title: `Best Self-Hosted ${name}`,
+    description: `A collection of the best self-hosted ${name}. Every listing includes a screenshot along with a detailed review of its features.`,
   }
 }
 

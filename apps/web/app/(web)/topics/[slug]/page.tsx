@@ -31,8 +31,8 @@ const getMetadata = (topic: TopicOne): Metadata => {
   const name = capitalCase(topic.slug)
 
   return {
-    title: `Open Source Projects tagged "${name}"`,
-    description: `A curated collection of the ${topic._count.tools} best open source projects tagged "${name}". Each listing includes a website screenshot along with a detailed review of its features.`,
+    title: `Free & Open Source Projects tagged "${name}"`,
+    description: `A collection of the ${topic._count.tools} best free & open source projects tagged with "${name}". Every listing includes a screenshot along with a detailed review of its features.`,
   }
 }
 

@@ -101,7 +101,7 @@ export default async function ToolPage(props: PageProps) {
         items={[
           {
             href: "/#tools",
-            name: "Open Source Tools",
+            name: "Free & Open Source Tools",
           },
           {
             href: `/${tool.slug}`,
@@ -134,25 +134,13 @@ export default async function ToolPage(props: PageProps) {
                 <Button suffix={<ArrowUpRightIcon />} className="sm:min-w-36" asChild>
                   <ExternalLink
                     href={tool.affiliateUrl || tool.websiteUrl}
-                    doFollow={tool.isFeatured}
+                    doFollow={true}
                     eventName="click_website"
                     eventProps={{ url: tool.websiteUrl }}
                   >
                     Visit {tool.name}
                   </ExternalLink>
                 </Button>
-
-                {tool.hostingUrl && (
-                  <Button variant="secondary" suffix={<ArrowUpRightIcon />} asChild>
-                    <ExternalLink
-                      href={tool.hostingUrl}
-                      eventName="click_ad"
-                      eventProps={{ url: tool.hostingUrl, type: "ToolPage" }}
-                    >
-                      Self-host with Easypanel
-                    </ExternalLink>
-                  </Button>
-                )}
 
                 {tool.discountAmount && (
                   <p className="pl-2 flex-1 text-sm text-balance text-green-600 dark:text-green-500">
@@ -241,12 +229,6 @@ export default async function ToolPage(props: PageProps) {
 
           <Section.Sidebar className="max-md:contents">
             <RepositoryDetails tool={tool} className="max-md:order-3" />
-
-            {/* Advertisement */}
-            <Suspense fallback={<AdCardSkeleton className="max-md:order-4" />}>
-              <AdCard type="ToolPage" className="max-md:order-4" />
-            </Suspense>
-
             {/* Featured */}
             <Suspense>
               <FeaturedTools className="max-md:order-10" />

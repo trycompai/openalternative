@@ -5,7 +5,6 @@ import { db } from "@openalternative/db"
 import { ToolStatus } from "@openalternative/db/client"
 import { revalidateTag } from "next/cache"
 import { z } from "zod"
-import { isProd } from "~/env"
 import { generateContent } from "~/lib/generate-content"
 import { uploadFavicon, uploadScreenshot } from "~/lib/media"
 import { adminProcedure } from "~/lib/safe-actions"
@@ -26,9 +25,8 @@ export const createTool = adminProcedure
       },
     })
 
-    // Send an event to the Inngest pipeline
     if (tool.publishedAt) {
-      isProd && (await inngest.send({ name: "tool.scheduled", data: { slug: tool.slug } }))
+      await inngest.send({ name: "tool.scheduled", data: { slug: tool.slug } })
     }
 
     return tool
@@ -70,7 +68,7 @@ export const deleteTools = adminProcedure
 
     // Send an event to the Inngest pipeline
     for (const tool of tools) {
-      isProd && (await inngest.send({ name: "tool.deleted", data: { slug: tool.slug } }))
+    await inngest.send({ name: "tool.deleted", data: { slug: tool.slug } })
     }
 
     return true
@@ -88,8 +86,7 @@ export const scheduleTool = adminProcedure
     revalidateTag("schedule")
     revalidateTag(`tool-${tool.slug}`)
 
-    // Send an event to the Inngest pipeline
-    isProd && (await inngest.send({ name: "tool.scheduled", data: { slug: tool.slug } }))
+    await inngest.send({ name: "tool.scheduled", data: { slug: tool.slug } })
 
     return true
   })
