@@ -1,7 +1,6 @@
 import type { Tool } from "@openalternative/db/client"
 import { Text } from "@react-email/components"
 import type { Jsonify } from "inngest/helpers/jsonify"
-import { EmailFeatureNudge } from "~/emails/components/feature-nudge"
 import { EmailWrapper, type EmailWrapperProps } from "~/emails/components/wrapper"
 
 export type EmailProps = EmailWrapperProps & {
@@ -19,7 +18,6 @@ const EmailSubmissionExpedited = ({ tool, ...props }: EmailProps) => {
         let us know. We'll do our best to meet your request.
       </Text>
 
-      <EmailFeatureNudge tool={tool} showButton />
     </EmailWrapper>
   )
 }

@@ -3,7 +3,6 @@ import { Text } from "@react-email/components"
 import type { Jsonify } from "inngest/helpers/jsonify"
 import { config } from "~/config"
 import { EmailButton } from "~/emails/components/button"
-import { EmailFeatureNudge } from "~/emails/components/feature-nudge"
 import { EmailWrapper, type EmailWrapperProps } from "~/emails/components/wrapper"
 
 export type EmailProps = EmailWrapperProps & {
@@ -33,7 +32,6 @@ const EmailToolPublished = ({ tool, ...props }: EmailProps) => {
         Check out {tool.name} on {config.site.name}
       </EmailButton>
 
-      <EmailFeatureNudge tool={tool} />
     </EmailWrapper>
   )
 }
