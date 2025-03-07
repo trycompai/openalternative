@@ -106,7 +106,7 @@ export const uploadFavicon = async (url: string, s3Key: string): Promise<string 
     return null
   }
 
-  return `${data}?v=${timestamp}`
+  return `https://cdn.fossalternative.com/${s3Key}.png?v=${timestamp}`
 }
 
 /**
@@ -125,7 +125,6 @@ export const uploadScreenshot = async (url: string, s3Key: string): Promise<stri
 
     // Cache
     cache: "false",
-    cache_ttl: "1",
 
     // Emulations
     dark_mode: "true",
@@ -160,11 +159,10 @@ export const uploadScreenshot = async (url: string, s3Key: string): Promise<stri
       .get()
       .json<{ store: { location: string } }>(),
   )
-
   if (error) {
     console.error("Error fetching screenshot:", error)
     throw error
   }
 
-  return `${data.store.location}?v=${timestamp}`
+  return `https://cdn.fossalternative.com/${s3Key}.webp?v=${timestamp}`
 }
