@@ -129,8 +129,8 @@ export default async function AlternativePage(props: PageProps) {
 
         <IntroDescription className="max-w-4xl">
           {alternative._count.tools
-            ? `A curated collection of the ${alternative._count.tools} best open source alternatives to ${alternative.name}.`
-            : `No open source ${alternative.name} alternatives found yet.`}
+            ? `A curated collection of the ${alternative._count.tools} best free & open source alternatives to ${alternative.name}.`
+            : `No free & open source ${alternative.name} alternatives found yet.`}
         </IntroDescription>
       </Intro>
 

@@ -32,8 +32,8 @@ const CountBadge = async () => {
     <Badge prefix={<Ping />} className="order-first" asChild>
       <Link href="/latest">
         {newCount
-          ? `${formatNumber(newCount)} new ${plur("tool", newCount)} added`
-          : `${formatNumber(count)}+ open source tools`}
+          ? `${formatNumber(newCount)} new free & open source ${plur("tool", newCount)} added`
+          : `${formatNumber(count)}+ free & open source tools`}
       </Link>
     </Badge>
   )
@@ -41,7 +41,7 @@ const CountBadge = async () => {
 
 const CountBadgeSkeleton = () => {
   return (
-    <Badge prefix={<Ping />} className="min-w-20 order-first pointer-events-none animate-pulse">
+    <Badge prefix={<Ping />} className="min-w-40 order-first pointer-events-none animate-pulse">
       &nbsp;
     </Badge>
   )
