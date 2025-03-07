@@ -13,19 +13,5 @@ export const ensureFreeSubmissions = async (
     return false
   }
 
-  const isPremium = await Promise.all([
-    step.waitForEvent("wait-for-expedited", {
-      event: "tool.expedited",
-      match: "data.slug",
-      timeout,
-    }),
-
-    step.waitForEvent("wait-for-featured", {
-      event: "tool.featured",
-      match: "data.slug",
-      timeout,
-    }),
-  ])
-
-  return isPremium.every(item => item === null)
+  return true
 }
