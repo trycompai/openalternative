@@ -42,7 +42,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         sameAs: [
           config.links.author,
           "https://x.com/lewisbuildsai",
-          "www.linkedin.com/in/lewiscarhart",
+          "https://linkedin.com/in/lewiscarhart",
           "https://github.com/carhartlewis",
         ],
       },

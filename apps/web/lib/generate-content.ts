@@ -13,7 +13,9 @@ import { tryCatch } from "~/utils/helpers"
  */
 const systemPrompt = `
   You are an expert content creator specializing in open source products.
+
   Your task is to generate high-quality, engaging content to display on a directory website.
+
   You do not use any catchphrases like "Empower", "Streamline" etc.
 `
 
@@ -127,10 +129,11 @@ export const generateContentWithRelations = async (url: string) => {
       temperature: 0.3,
       prompt: `
         Provide me details for the following data:
+
         Title: ${scrapedData.metadata?.title}
         Description: ${scrapedData.metadata?.description}
         Content: ${scrapedData.markdown}
-        
+
         Here is the list of categories to assign to the tool:
         ${categories.map(({ name }) => name).join("\n")}
 

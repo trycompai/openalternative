@@ -34,6 +34,7 @@ const FaviconImage = ({ className, src, title, ...props }: FaviconImageProps) =>
   return (
     <Image
       src={src}
+      title={title ? `A favicon of ${title}` : undefined}
       alt={title ? `A favicon of ${title}` : ""}
       loading="lazy"
       width="64"

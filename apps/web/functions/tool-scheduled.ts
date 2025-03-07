@@ -97,41 +97,5 @@ export const toolScheduled = inngest.createFunction(
         react: EmailToolScheduled({ to, subject, tool }),
       })
     })
-
-    // Wait for 1 month and check if tool was expedited
-    if (tool.publishedAt && differenceInDays(new Date(), tool.publishedAt) < 30) {
-      const isFreeAfterOneMonth = await ensureFreeSubmissions(step, tool.slug, "30d")
-
-      // Send first reminder if not expedited
-      await step.run("send-first-reminder", async () => {
-        if (isFreeAfterOneMonth) {
-          const subject = `Skip the queue for ${tool.name} on ${config.site.name} 🚀`
-
-          return await sendEmails({
-            to,
-            subject,
-            react: EmailToolExpediteReminder({ to, subject, tool, monthsWaiting: 1 }),
-          })
-        }
-      })
-    }
-
-    // Wait for another month and check if tool was expedited
-    if (tool.publishedAt && differenceInDays(new Date(), tool.publishedAt) < 60) {
-      const isFreeAfterTwoMonths = await ensureFreeSubmissions(step, tool.slug, "30d")
-
-      // Send second reminder if not expedited
-      await step.run("send-second-reminder", async () => {
-        if (isFreeAfterTwoMonths) {
-          const subject = `Last chance to expedite ${tool.name} on ${config.site.name} ⚡️`
-
-          return await sendEmails({
-            to,
-            subject,
-            react: EmailToolExpediteReminder({ to, subject, tool, monthsWaiting: 2 }),
-          })
-        }
-      })
-    }
   },
 )

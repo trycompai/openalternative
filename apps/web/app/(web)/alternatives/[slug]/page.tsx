@@ -48,8 +48,8 @@ const getMetadata = (alternative: AlternativeOne): Metadata => {
   const count = alternative._count.tools
 
   return {
-    title: `${count > 1 ? `${count} ` : ""}Best Open Source ${alternative.name} Alternatives in ${year}`,
-    description: `A curated collection of the best open source alternatives to ${alternative.name}. Each listing includes a website screenshot along with a detailed review of its features.`,
+    title: `${count > 1 ? `${count} ` : ""}Best Free & Open Source ${alternative.name} Alternatives in ${year}`,
+    description: `A  collection of the best free & open source alternatives to ${alternative.name}. Every listing includes a website screenshot along with a detailed review of its features.`,
   }
 }
 
@@ -139,27 +139,7 @@ export default async function AlternativePage(props: PageProps) {
           <Section.Content className="gap-12 md:gap-14 lg:gap-16">
             <Prose>
               <p>
-                The best open source alternative to {alternative.name} is {bestTools.shift()}. If
-                that doesn't suit you, we've compiled a{" "}
-                <Link href="/about#how-are-rankings-calculated">ranked list</Link> of other open
-                source {alternative.name} alternatives to help you find a suitable replacement.
-                {!!bestTools.length && (
-                  <>
-                    {" "}
-                    Other interesting open source
-                    {bestTools.length === 1
-                      ? ` alternative to ${alternative.name} is `
-                      : ` alternatives to ${alternative.name} are: `}
-                    {bestTools.map((alt, index) => (
-                      <Fragment key={index}>
-                        {index > 0 && index !== bestTools.length - 1 && ", "}
-                        {index > 0 && index === bestTools.length - 1 && " and "}
-                        {alt}
-                      </Fragment>
-                    ))}
-                    .
-                  </>
-                )}
+                The best free & open source alternative to {alternative.name} is {bestTools.shift()}.
               </p>
 
               {!!bestCategories.length && (
@@ -173,8 +153,7 @@ export default async function AlternativePage(props: PageProps) {
                       {category}
                     </Fragment>
                   ))}
-                  . Browse these if you want a narrower list of alternatives or looking for a
-                  specific functionality of {alternative.name}.
+                  . Browse these narrower lists of alternatives if you're looking for the same functionality as {alternative.name}.
                 </p>
               )}
 
