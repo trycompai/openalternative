@@ -113,7 +113,7 @@ export const SubmitForm = ({ className, ...props }: ComponentProps<"form">) => {
             <FormItem>
               <FormLabel isRequired>Name:</FormLabel>
               <FormControl>
-                <Input type="text" size="lg" placeholder="PostHog" data-1p-ignore {...field} />
+                <Input type="text" size="lg" placeholder="Comp AI" data-1p-ignore {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
